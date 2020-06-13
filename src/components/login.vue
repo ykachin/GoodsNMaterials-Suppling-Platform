@@ -51,6 +51,10 @@
         <el-form-item label="确认密码" :label-width="formLabelWidth" prop="checkPass">
           <el-input type="password" v-model="form.password_repeat"></el-input>
         </el-form-item>
+        <el-form-item label="验证码" :label-width="formLabelWidth">
+          <el-input v-model="form.code" autocomplete="off"></el-input>
+          <el-button type="primary" :disabled="isDisabled" class="m-margin-top" plain @click="getCode">{{buttonName}}</el-button>
+        </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button @click="registerFormVisible = false">取 消</el-button>
@@ -102,10 +106,17 @@
           }
       };
       return {
+        //验证码
+        isDisabled: false,
+        time: 60,
+        buttonName: "发送短信",
+
+        code:'',
         form:{
           username:'',
           password:'',
-          password_repeat:''
+          password_repeat:'',
+          code:''
         },
         formLabelWidth: '120px',
         registerFormVisible:false,
@@ -140,7 +151,40 @@
       };
     },
     methods: {
+      /*
+      *@function：getCode
+      * @param：null
+      */
+      getCode(){
+        const _this=this
+        console.log("送给后端的手机号",_this.form.username)
+        const tele = {telephone:_this.form.username}
+        this.$axios({
+          method: 'post',
+          url: '/api/user/veriCode',
+          data: _this.$qs.stringify(tele),
+        }).then(function (res) {
+          console.log("获取手机验证码成功",res)
+          _this.$message.success('获取验证码成功')
+          _this.code=res.data.data
+        }).catch(function (res) {
+          console.log("获取手机验证码失败",res)
+          _this.$message.error('获取验证码失败')
+        })
 
+        let me = this;
+        me.isDisabled = true;
+        let interval = window.setInterval(function() {
+          me.buttonName = '（' + me.time + '秒）后重新发送';
+          --me.time;
+          if(me.time < 0) {
+            me.buttonName = "重新发送";
+            me.time = 60;
+            me.isDisabled = false;
+            window.clearInterval(interval);
+          }
+        }, 1000);
+      },
       /*
       * @function：getmyInfomation
       * @param：null
@@ -178,7 +222,8 @@
         console.log(this.form)
         const zhuce={
           telephone:this.form.username,
-          password:this.form.password
+          password:this.form.password,
+          code:this.form.code
         }
         this.$axios({
           method: 'post',
@@ -217,7 +262,7 @@
               }),
             }).then(function (r) {
               console.log("向服务器发送请求成功了")
-              _this.$message.success('登陆成功')
+
               /*_this.$alert("恭喜您("+_this.ruleForm.username+")登陆成功！").then(()=>{
                 confirmButtonText:'确定',
                 callback:action => {
@@ -227,10 +272,13 @@
               console.log(r)
               const res=r.data
               if(res.ok){
+                _this.$message.success('登陆成功')
                 /*window.sessionStorage.setItem('primarypagenum',1)*/
-                window.sessionStorage.setItem('token',res.data.access_token)
+                window.sessionStorage.setItem('token',res.data.token.access_token)
                 //通过token查找用户信息
                 window.sessionStorage.setItem('personalInfo',_this.ruleForm.username)
+                //获取userid
+                window.sessionStorage.setItem('user_id',res.data.userId)
                 /*_this.getPersonInfo()*/
                 _this.$confirm("恭喜您("+_this.ruleForm.username+")登陆成功！", '提示', {
                   confirmButtonText: '确定',

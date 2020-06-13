@@ -8,6 +8,11 @@
 
 }*/
 
+body {
+  background: url("../images/bg.png");
+}
+
+
 .m-padded-mini {
     padding: 0.2em !important;
 }

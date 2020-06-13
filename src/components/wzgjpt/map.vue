@@ -70,11 +70,31 @@
       inject:['reload'],
       data() {
         return {
+          NeedMapInfo_2:[],
+          NeedMapInfo:[],
           drawer: false,
         }
       },
-      mounted () {
-        // 初始化echarts实例
+      //数据自动刷新，必然需要一个监听机制告诉Echarts重新设置数据
+      // watch: {
+      //   //观察option的变化
+      //   chartOption: {
+      //     handler(newVal, oldVal){
+      //       if (this.chinachart) {
+      //         if (newVal) {
+      //           this.chinachart.setOption(newVal,true);
+      //         } else {
+      //           this.chinachart.setOption(oldVal,true);
+      //         }
+      //       }
+      //     },
+      //     deep: true //对象内部属性的监听，关键。
+      //   }
+      // },
+      async mounted () {
+        const _this=this
+        await this.getNeedMapInfo()
+        console.log("为啥获取不到：",_this.NeedMapInfo_2)
         this.chinachart = echarts.init(document.getElementById('china_map'))
         // 进行相关配置
         this.chartOption = {
@@ -82,25 +102,34 @@
             // formatter详细配置： https://echarts.baidu.com/option.html#tooltip.formatter
             formatter (params, ticket, callback) {
               // params.data 就是series配置项中的data数据遍历
+              console.log("params:",params)
               let localValue,
                 perf,
                 downloadSpeep,
                 usability,
-                point
-              if (params.data) {
-                localValue = params.data.value
-                perf = params.data.perf
-                downloadSpeep = params.data.downloadSpeep
-                usability = params.data.usability
-                point = params.data.point
-              } else { // 为了防止没有定义数据的时候报错写的
-                localValue = 0
-                perf = 0
-                downloadSpeep = 0
-                usability = 0
-                point = 0
-              }
-              let htmlStr = `
+                point,
+                needCount,
+                province
+              needCount =params.value
+              province =params.name
+              // if (params.data) {
+              //   localValue = params.data.value
+              //   perf = params.data.perf
+              //   downloadSpeep = params.data.downloadSpeep
+              //   usability = params.data.usability
+              //   point = params.data.point
+              //   needCount =params.data.needCount
+              //   province =params.data.province
+              // } else { // 为了防止没有定义数据的时候报错写的
+              //   localValue = 0
+              //   perf = 0
+              //   downloadSpeep = 0
+              //   usability = 0
+              //   point = 0
+              //   needCount = 0
+              //   province =''
+              // }
+              /*let htmlStr = `
           <div style='font-size:18px;'> ${params.name}</div>
           <p style='text-align:left;margin-top:-10px;'>
 	          区域对应数据value：${localValue}<br/>
@@ -108,6 +137,12 @@
 	          下载速度downloadSpeep：${downloadSpeep}<br/>
 	          可用性usability：${usability}<br/>
 	          监测点数point：${point}<br/>
+          </p>
+        `*/
+              let htmlStr = `
+          <div style='font-size:18px;'> ${province}</div>
+          <p style='text-align:left;'>
+	          需求个数：${needCount}<br/>
           </p>
         `
               return htmlStr
@@ -157,7 +192,10 @@
                 show: true
               },
               // 这是需要配置地图上的某个地区的数据，根据后台的返回的数据进行拼接（下面是我定义的假数据）
-              data: [{
+              data: _this.NeedMapInfo_2
+              // [{"name": "北京",
+              //   "value": 599,}]
+              /*[{
                 'name': '北京',
                 'value': 599,
                 'perf': '0.501s', // 性能
@@ -186,8 +224,100 @@
               }, {
                 'name': '四川',
                 'value': 453
-              }]
-            }
+              }
+              ]*/
+            },
+            // {
+            //   name: '散点',
+            //   type: 'effectScatter',
+            //   coordinateSystem: 'geo',
+            //   data: 100,
+            //   symbolSize: function(val) {
+            //     return 15;
+            //   },
+            //   label: {
+            //     normal: {
+            //       formatter: '{b}',
+            //       position: 'right',
+            //       show: true,
+            //       textStyle: {
+            //         color: '#00B8FF'
+            //       }
+            //     },
+            //     emphasis: {
+            //       show: true
+            //     }
+            //   },
+            //   itemStyle: {
+            //     normal: {
+            //       color: 'yellow'
+            //     }
+            //   }
+            // },
+            // {
+            //   name: '点',
+            //   type: 'scatter',
+            //   coordinateSystem: 'geo',
+            //   symbol: 'pin', //气泡
+            //   symbolSize: function(val) {
+            //     var a = (maxSize4Pin - minSize4Pin) / (max - min);
+            //     var b = minSize4Pin - a * min;
+            //     b = maxSize4Pin - a * max;
+            //     return 40  ;
+            //   },
+            //   symbolOffset: [0,'-20%'],
+            //   label: {
+            //     normal: {
+            //       show: true,
+            //       formatter: function(params) {
+            //         return params.data.value[2]
+            //       },
+            //       textStyle: {
+            //         color: '#fff',
+            //         fontSize: 12,
+            //         fontWeight: 'bold'
+            //       },
+            //     }
+            //
+            //   },
+            //   itemStyle: {
+            //     normal: {
+            //       color: 'royalblue', //标志颜色
+            //     }
+            //   },
+            //   zlevel: 6,
+            //   data: 100,
+            // },
+            // {
+            //   name: 'kuoSan',
+            //   type: 'effectScatter',
+            //   coordinateSystem: 'geo',
+            //   data: 100,
+            //   symbolSize: function(val) {
+            //     return 25;
+            //   },
+            //   showEffectOn: 'render',
+            //   rippleEffect: {
+            //     brushType: 'stroke'
+            //   },
+            //   hoverAnimation: true,
+            //   label: {
+            //     normal: {
+            //       formatter: '{b}',
+            //       position: 'right',
+            //       show: false//bug：设置为true造成top5的省份名称重影
+            //     }
+            //   },
+            //   itemStyle: {
+            //     normal: {
+            //       color: 'yellow',
+            //       shadowBlur: 10,
+            //       shadowColor: 'yellow'
+            //     }
+            //   },
+            //   zlevel: 1
+            // }
+
           ]
         }
         // 使用刚指定的配置项和数据显示地图数据
@@ -195,6 +325,38 @@
 
       },
       methods:{
+        /*
+        * @function：getMapInfo
+        * @param：null
+        * */
+        async getNeedMapInfo(){
+          const _this=this
+          await this.$axios({
+            method: 'post',
+            url: '/api/need/mapInfo',
+          }).then(function (res) {
+            _this.$message.success('获取各省份需求信息成功！')
+            console.log("获取各省份需求信息成功:",res.data.data)
+            _this.NeedMapInfo=res.data.data
+            for(let c in _this.NeedMapInfo){
+              console.log("c是什么：",c)
+              let param ={}
+              param['"value"']=_this.NeedMapInfo[c]['needCount']
+              param['"name"']=_this.NeedMapInfo[c]['province']
+              _this.NeedMapInfo_2.push(param)
+              /*_this.NeedMapInfo[c]['"value"']=_this.NeedMapInfo[c]['needCount']
+              _this.NeedMapInfo[c]['"name"']=_this.NeedMapInfo[c]['province']*/
+              /*delete _this.NeedMapInfo[c].province
+              delete _this.NeedMapInfo[c].needCount*/
+
+            }
+            console.log('增加value后的数组：',_this.NeedMapInfo_2)
+          }).catch(function (res) {
+            _this.$message.error('获取各省份需求信息失败！')
+            console.log("获取各省份需求信息失败:",res)
+          })
+
+        },
         /*
         * @function：showDate
         * @param：object
@@ -216,8 +378,10 @@
         myhead:myhead,
         myfoot:myfoot
       },
-      name: "map",
+      name: "mmap",
       async created() {
+        //await this.getNeedMapInfo()
+        console.log("created:",this.NeedMapInfo_2)
       }
     }
 </script>

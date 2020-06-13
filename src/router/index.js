@@ -15,7 +15,7 @@ Vue.use(Router)
 
 
 const router= new Router({
-  /*base:'/vue-peashooter/',*/
+  base:'/Material-Sharing-Platform/',
   routes: [
     {
       path:'/login',
@@ -43,7 +43,7 @@ const router= new Router({
     },
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/needer'
     },
     {
       path: '/*', // 页面不存在的情况下会跳到404页面

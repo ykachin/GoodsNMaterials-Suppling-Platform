@@ -8,46 +8,64 @@
     <a class="op"  @click="f5">个人捐赠</a>
     <a class="op"  @click="f6">个人主页</a>
     <el-dropdown class="op2">
-      <span class="el-dropdown-link">
+      <span class="el-dropdown-link" v-if="!showDefaut">
         {{personalInfo}}<i class="el-icon-arrow-down el-icon--right"></i>
+      </span>
+      <span class="el-dropdown-link" v-if="showDefaut" @click="f7">
+        请先登录<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item  @click.native="logout">退出登录</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-    <a class="op2" href="" @click=""><el-avatar :size="20" :src="circleUrl"></el-avatar></a>
+    <!--<a class="op2" href="" @click=""><el-avatar :size="20" :src="circleUrl"></el-avatar></a>-->
   </div>
 </template>
 
 <script>
   export default {
+    inject:['reload'],
   name: 'myhead',
   data(){
     return{
+      showDefaut:true,
       personalInfo:window.sessionStorage.getItem('personalInfo'),
       circleUrl:"https://picsum.photos/100/100/?blur=5"
     }
   },
+    created() {
+      this.showDefaut = window.sessionStorage.getItem('user_id') === null
+
+    },
     methods:{
       f1(){
         this.$router.push("/needer")
-          this.$router.go(0)
+          this.reload()
       },
       f3(){
         this.$router.push("/provider")
-        this.$router.go(0)
+        /*this.$router.go(0)*/
+        this.reload()
       },
       f4(){
         this.$router.push("/map")
-        this.$router.go(0)
+        this.reload()
       },
       f5(){
         this.$router.push("/personaldonate")
-        this.$router.go(0)
+        this.reload()
       },
       f6(){
-        this.$router.push("/personalpage")
-        this.$router.go(0)
+        if(window.sessionStorage.getItem('user_id')){
+          this.$router.push("/personalpage")
+        }else{
+          this.$router.push("/login")
+        }
+        this.reload()
+      },
+      f7(){
+        this.$router.push("/login")
+        this.reload()
       },
       logout(){
         window.sessionStorage.clear()
