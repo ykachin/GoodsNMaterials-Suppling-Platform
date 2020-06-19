@@ -1,0 +1,3647 @@
+.nmsl{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;	
+}
+
+.bubbles {
+  top: 30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+}
+.bubbles .bubble {
+  border-radius: 100%;
+  transform: translateY(900px) scale(0);
+  opacity: 0.8;
+  animation-name: bubbles;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.bubbles .bubble:before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 50%;
+  border-radius: 100%;
+  filter: blur(5px);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 58%);
+}
+
+.bubble:nth-of-type(1) {
+  width: 54px;
+  height: 54px;
+  top: 71vh;
+  left: 80vw;
+  animation-delay: 0.0333333333s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(2) {
+  width: 106px;
+  height: 106px;
+  top: 84vh;
+  left: 98vw;
+  animation-delay: 0.0666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(3) {
+  width: 43px;
+  height: 43px;
+  top: 34vh;
+  left: 82vw;
+  animation-delay: 0.1s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(4) {
+  width: 3px;
+  height: 3px;
+  top: 73vh;
+  left: 78vw;
+  animation-delay: 0.1333333333s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(5) {
+  width: 83px;
+  height: 83px;
+  top: 40vh;
+  left: 12vw;
+  animation-delay: 0.1666666667s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(6) {
+  width: 42px;
+  height: 42px;
+  top: 74vh;
+  left: 36vw;
+  animation-delay: 0.2s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(7) {
+  width: 115px;
+  height: 115px;
+  top: 88vh;
+  left: 62vw;
+  animation-delay: 0.2333333333s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(8) {
+  width: 124px;
+  height: 124px;
+  top: 10vh;
+  left: 83vw;
+  animation-delay: 0.2666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(9) {
+  width: 70px;
+  height: 70px;
+  top: 65vh;
+  left: 51vw;
+  animation-delay: 0.3s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(10) {
+  width: 36px;
+  height: 36px;
+  top: 95vh;
+  left: 30vw;
+  animation-delay: 0.3333333333s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(11) {
+  width: 86px;
+  height: 86px;
+  top: 69vh;
+  left: 52vw;
+  animation-delay: 0.3666666667s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(12) {
+  width: 78px;
+  height: 78px;
+  top: 77vh;
+  left: 62vw;
+  animation-delay: 0.4s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(13) {
+  width: 79px;
+  height: 79px;
+  top: 32vh;
+  left: 71vw;
+  animation-delay: 0.4333333333s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(14) {
+  width: 17px;
+  height: 17px;
+  top: 46vh;
+  left: 57vw;
+  animation-delay: 0.4666666667s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(15) {
+  width: 69px;
+  height: 69px;
+  top: 43vh;
+  left: 93vw;
+  animation-delay: 0.5s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(16) {
+  width: 126px;
+  height: 126px;
+  top: 29vh;
+  left: 77vw;
+  animation-delay: 0.5333333333s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(17) {
+  width: 97px;
+  height: 97px;
+  top: 36vh;
+  left: 79vw;
+  animation-delay: 0.5666666667s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(18) {
+  width: 99px;
+  height: 99px;
+  top: 54vh;
+  left: 71vw;
+  animation-delay: 0.6s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(19) {
+  width: 96px;
+  height: 96px;
+  top: 44vh;
+  left: 24vw;
+  animation-delay: 0.6333333333s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(20) {
+  width: 33px;
+  height: 33px;
+  top: 87vh;
+  left: 70vw;
+  animation-delay: 0.6666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(21) {
+  width: 14px;
+  height: 14px;
+  top: 88vh;
+  left: 4vw;
+  animation-delay: 0.7s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(22) {
+  width: 19px;
+  height: 19px;
+  top: 40vh;
+  left: 100vw;
+  animation-delay: 0.7333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(23) {
+  width: 88px;
+  height: 88px;
+  top: 13vh;
+  left: 48vw;
+  animation-delay: 0.7666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(24) {
+  width: 63px;
+  height: 63px;
+  top: 38vh;
+  left: 93vw;
+  animation-delay: 0.8s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(25) {
+  width: 87px;
+  height: 87px;
+  top: 72vh;
+  left: 37vw;
+  animation-delay: 0.8333333333s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(26) {
+  width: 96px;
+  height: 96px;
+  top: 33vh;
+  left: 97vw;
+  animation-delay: 0.8666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(27) {
+  width: 114px;
+  height: 114px;
+  top: 61vh;
+  left: 65vw;
+  animation-delay: 0.9s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(28) {
+  width: 25px;
+  height: 25px;
+  top: 27vh;
+  left: 33vw;
+  animation-delay: 0.9333333333s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(29) {
+  width: 57px;
+  height: 57px;
+  top: 86vh;
+  left: 19vw;
+  animation-delay: 0.9666666667s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(30) {
+  width: 82px;
+  height: 82px;
+  top: 77vh;
+  left: 88vw;
+  animation-delay: 1s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(31) {
+  width: 32px;
+  height: 32px;
+  top: 39vh;
+  left: 3vw;
+  animation-delay: 1.0333333333s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(32) {
+  width: 89px;
+  height: 89px;
+  top: 48vh;
+  left: 33vw;
+  animation-delay: 1.0666666667s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(33) {
+  width: 54px;
+  height: 54px;
+  top: 30vh;
+  left: 18vw;
+  animation-delay: 1.1s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(34) {
+  width: 35px;
+  height: 35px;
+  top: 19vh;
+  left: 26vw;
+  animation-delay: 1.1333333333s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(35) {
+  width: 130px;
+  height: 130px;
+  top: 66vh;
+  left: 99vw;
+  animation-delay: 1.1666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(36) {
+  width: 112px;
+  height: 112px;
+  top: 40vh;
+  left: 74vw;
+  animation-delay: 1.2s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(37) {
+  width: 83px;
+  height: 83px;
+  top: 8vh;
+  left: 45vw;
+  animation-delay: 1.2333333333s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(38) {
+  width: 128px;
+  height: 128px;
+  top: 65vh;
+  left: 77vw;
+  animation-delay: 1.2666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(39) {
+  width: 53px;
+  height: 53px;
+  top: 48vh;
+  left: 69vw;
+  animation-delay: 1.3s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(40) {
+  width: 113px;
+  height: 113px;
+  top: 86vh;
+  left: 80vw;
+  animation-delay: 1.3333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(41) {
+  width: 55px;
+  height: 55px;
+  top: 47vh;
+  left: 5vw;
+  animation-delay: 1.3666666667s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(42) {
+  width: 115px;
+  height: 115px;
+  top: 82vh;
+  left: 89vw;
+  animation-delay: 1.4s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(43) {
+  width: 81px;
+  height: 81px;
+  top: 44vh;
+  left: 68vw;
+  animation-delay: 1.4333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(44) {
+  width: 108px;
+  height: 108px;
+  top: 61vh;
+  left: 80vw;
+  animation-delay: 1.4666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(45) {
+  width: 46px;
+  height: 46px;
+  top: 43vh;
+  left: 40vw;
+  animation-delay: 1.5s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(46) {
+  width: 128px;
+  height: 128px;
+  top: 25vh;
+  left: 38vw;
+  animation-delay: 1.5333333333s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(47) {
+  width: 97px;
+  height: 97px;
+  top: 89vh;
+  left: 2vw;
+  animation-delay: 1.5666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(48) {
+  width: 3px;
+  height: 3px;
+  top: 88vh;
+  left: 17vw;
+  animation-delay: 1.6s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(49) {
+  width: 103px;
+  height: 103px;
+  top: 23vh;
+  left: 93vw;
+  animation-delay: 1.6333333333s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(50) {
+  width: 122px;
+  height: 122px;
+  top: 10vh;
+  left: 40vw;
+  animation-delay: 1.6666666667s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(51) {
+  width: 127px;
+  height: 127px;
+  top: 30vh;
+  left: 33vw;
+  animation-delay: 1.7s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(52) {
+  width: 84px;
+  height: 84px;
+  top: 36vh;
+  left: 43vw;
+  animation-delay: 1.7333333333s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(53) {
+  width: 54px;
+  height: 54px;
+  top: 41vh;
+  left: 20vw;
+  animation-delay: 1.7666666667s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(54) {
+  width: 80px;
+  height: 80px;
+  top: 90vh;
+  left: 82vw;
+  animation-delay: 1.8s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(55) {
+  width: 98px;
+  height: 98px;
+  top: 21vh;
+  left: 40vw;
+  animation-delay: 1.8333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(56) {
+  width: 48px;
+  height: 48px;
+  top: 32vh;
+  left: 6vw;
+  animation-delay: 1.8666666667s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(57) {
+  width: 66px;
+  height: 66px;
+  top: 85vh;
+  left: 25vw;
+  animation-delay: 1.9s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(58) {
+  width: 40px;
+  height: 40px;
+  top: 68vh;
+  left: 42vw;
+  animation-delay: 1.9333333333s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(59) {
+  width: 95px;
+  height: 95px;
+  top: 47vh;
+  left: 60vw;
+  animation-delay: 1.9666666667s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(60) {
+  width: 111px;
+  height: 111px;
+  top: 69vh;
+  left: 23vw;
+  animation-delay: 2s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(61) {
+  width: 128px;
+  height: 128px;
+  top: 18vh;
+  left: 15vw;
+  animation-delay: 2.0333333333s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(62) {
+  width: 37px;
+  height: 37px;
+  top: 2vh;
+  left: 96vw;
+  animation-delay: 2.0666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(63) {
+  width: 15px;
+  height: 15px;
+  top: 77vh;
+  left: 64vw;
+  animation-delay: 2.1s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(64) {
+  width: 73px;
+  height: 73px;
+  top: 42vh;
+  left: 61vw;
+  animation-delay: 2.1333333333s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(65) {
+  width: 97px;
+  height: 97px;
+  top: 4vh;
+  left: 5vw;
+  animation-delay: 2.1666666667s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(66) {
+  width: 5px;
+  height: 5px;
+  top: 82vh;
+  left: 70vw;
+  animation-delay: 2.2s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(67) {
+  width: 43px;
+  height: 43px;
+  top: 77vh;
+  left: 12vw;
+  animation-delay: 2.2333333333s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(68) {
+  width: 68px;
+  height: 68px;
+  top: 28vh;
+  left: 61vw;
+  animation-delay: 2.2666666667s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(69) {
+  width: 71px;
+  height: 71px;
+  top: 9vh;
+  left: 42vw;
+  animation-delay: 2.3s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(70) {
+  width: 83px;
+  height: 83px;
+  top: 58vh;
+  left: 49vw;
+  animation-delay: 2.3333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(71) {
+  width: 16px;
+  height: 16px;
+  top: 53vh;
+  left: 29vw;
+  animation-delay: 2.3666666667s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(72) {
+  width: 9px;
+  height: 9px;
+  top: 65vh;
+  left: 41vw;
+  animation-delay: 2.4s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(73) {
+  width: 80px;
+  height: 80px;
+  top: 55vh;
+  left: 95vw;
+  animation-delay: 2.4333333333s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(74) {
+  width: 94px;
+  height: 94px;
+  top: 97vh;
+  left: 59vw;
+  animation-delay: 2.4666666667s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(75) {
+  width: 108px;
+  height: 108px;
+  top: 27vh;
+  left: 58vw;
+  animation-delay: 2.5s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(76) {
+  width: 66px;
+  height: 66px;
+  top: 77vh;
+  left: 34vw;
+  animation-delay: 2.5333333333s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(77) {
+  width: 85px;
+  height: 85px;
+  top: 9vh;
+  left: 62vw;
+  animation-delay: 2.5666666667s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(78) {
+  width: 73px;
+  height: 73px;
+  top: 7vh;
+  left: 84vw;
+  animation-delay: 2.6s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(79) {
+  width: 123px;
+  height: 123px;
+  top: 15vh;
+  left: 14vw;
+  animation-delay: 2.6333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(80) {
+  width: 85px;
+  height: 85px;
+  top: 76vh;
+  left: 36vw;
+  animation-delay: 2.6666666667s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(81) {
+  width: 91px;
+  height: 91px;
+  top: 24vh;
+  left: 68vw;
+  animation-delay: 2.7s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(82) {
+  width: 126px;
+  height: 126px;
+  top: 14vh;
+  left: 59vw;
+  animation-delay: 2.7333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(83) {
+  width: 117px;
+  height: 117px;
+  top: 89vh;
+  left: 19vw;
+  animation-delay: 2.7666666667s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(84) {
+  width: 19px;
+  height: 19px;
+  top: 7vh;
+  left: 40vw;
+  animation-delay: 2.8s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(85) {
+  width: 52px;
+  height: 52px;
+  top: 4vh;
+  left: 40vw;
+  animation-delay: 2.8333333333s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(86) {
+  width: 71px;
+  height: 71px;
+  top: 68vh;
+  left: 81vw;
+  animation-delay: 2.8666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(87) {
+  width: 74px;
+  height: 74px;
+  top: 38vh;
+  left: 75vw;
+  animation-delay: 2.9s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(88) {
+  width: 129px;
+  height: 129px;
+  top: 56vh;
+  left: 19vw;
+  animation-delay: 2.9333333333s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(89) {
+  width: 6px;
+  height: 6px;
+  top: 46vh;
+  left: 26vw;
+  animation-delay: 2.9666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(90) {
+  width: 15px;
+  height: 15px;
+  top: 37vh;
+  left: 100vw;
+  animation-delay: 3s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(91) {
+  width: 54px;
+  height: 54px;
+  top: 36vh;
+  left: 7vw;
+  animation-delay: 3.0333333333s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(92) {
+  width: 16px;
+  height: 16px;
+  top: 12vh;
+  left: 1vw;
+  animation-delay: 3.0666666667s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(93) {
+  width: 108px;
+  height: 108px;
+  top: 96vh;
+  left: 80vw;
+  animation-delay: 3.1s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(94) {
+  width: 1px;
+  height: 1px;
+  top: 71vh;
+  left: 49vw;
+  animation-delay: 3.1333333333s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(95) {
+  width: 39px;
+  height: 39px;
+  top: 48vh;
+  left: 89vw;
+  animation-delay: 3.1666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(96) {
+  width: 14px;
+  height: 14px;
+  top: 50vh;
+  left: 5vw;
+  animation-delay: 3.2s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(97) {
+  width: 9px;
+  height: 9px;
+  top: 65vh;
+  left: 42vw;
+  animation-delay: 3.2333333333s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(98) {
+  width: 85px;
+  height: 85px;
+  top: 74vh;
+  left: 71vw;
+  animation-delay: 3.2666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(99) {
+  width: 13px;
+  height: 13px;
+  top: 89vh;
+  left: 19vw;
+  animation-delay: 3.3s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(100) {
+  width: 90px;
+  height: 90px;
+  top: 62vh;
+  left: 21vw;
+  animation-delay: 3.3333333333s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(101) {
+  width: 32px;
+  height: 32px;
+  top: 26vh;
+  left: 40vw;
+  animation-delay: 3.3666666667s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(102) {
+  width: 4px;
+  height: 4px;
+  top: 63vh;
+  left: 73vw;
+  animation-delay: 3.4s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(103) {
+  width: 118px;
+  height: 118px;
+  top: 12vh;
+  left: 3vw;
+  animation-delay: 3.4333333333s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(104) {
+  width: 73px;
+  height: 73px;
+  top: 77vh;
+  left: 90vw;
+  animation-delay: 3.4666666667s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(105) {
+  width: 26px;
+  height: 26px;
+  top: 87vh;
+  left: 60vw;
+  animation-delay: 3.5s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(106) {
+  width: 61px;
+  height: 61px;
+  top: 48vh;
+  left: 86vw;
+  animation-delay: 3.5333333333s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(107) {
+  width: 5px;
+  height: 5px;
+  top: 17vh;
+  left: 25vw;
+  animation-delay: 3.5666666667s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(108) {
+  width: 109px;
+  height: 109px;
+  top: 66vh;
+  left: 71vw;
+  animation-delay: 3.6s;
+  animation-duration: 24s;
+}
+
+.bubble:nth-of-type(109) {
+  width: 124px;
+  height: 124px;
+  top: 34vh;
+  left: 43vw;
+  animation-delay: 3.6333333333s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(110) {
+  width: 24px;
+  height: 24px;
+  top: 81vh;
+  left: 52vw;
+  animation-delay: 3.6666666667s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(111) {
+  width: 78px;
+  height: 78px;
+  top: 40vh;
+  left: 19vw;
+  animation-delay: 3.7s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(112) {
+  width: 22px;
+  height: 22px;
+  top: 96vh;
+  left: 7vw;
+  animation-delay: 3.7333333333s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(113) {
+  width: 95px;
+  height: 95px;
+  top: 86vh;
+  left: 74vw;
+  animation-delay: 3.7666666667s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(114) {
+  width: 107px;
+  height: 107px;
+  top: 15vh;
+  left: 30vw;
+  animation-delay: 3.8s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(115) {
+  width: 69px;
+  height: 69px;
+  top: 74vh;
+  left: 37vw;
+  animation-delay: 3.8333333333s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(116) {
+  width: 66px;
+  height: 66px;
+  top: 61vh;
+  left: 95vw;
+  animation-delay: 3.8666666667s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(117) {
+  width: 38px;
+  height: 38px;
+  top: 66vh;
+  left: 64vw;
+  animation-delay: 3.9s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(118) {
+  width: 53px;
+  height: 53px;
+  top: 56vh;
+  left: 28vw;
+  animation-delay: 3.9333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(119) {
+  width: 41px;
+  height: 41px;
+  top: 30vh;
+  left: 62vw;
+  animation-delay: 3.9666666667s;
+  animation-duration: 24s;
+}
+
+.bubble:nth-of-type(120) {
+  width: 49px;
+  height: 49px;
+  top: 71vh;
+  left: 6vw;
+  animation-delay: 4s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(121) {
+  width: 57px;
+  height: 57px;
+  top: 95vh;
+  left: 67vw;
+  animation-delay: 4.0333333333s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(122) {
+  width: 19px;
+  height: 19px;
+  top: 96vh;
+  left: 98vw;
+  animation-delay: 4.0666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(123) {
+  width: 12px;
+  height: 12px;
+  top: 64vh;
+  left: 59vw;
+  animation-delay: 4.1s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(124) {
+  width: 13px;
+  height: 13px;
+  top: 14vh;
+  left: 22vw;
+  animation-delay: 4.1333333333s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(125) {
+  width: 26px;
+  height: 26px;
+  top: 22vh;
+  left: 30vw;
+  animation-delay: 4.1666666667s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(126) {
+  width: 29px;
+  height: 29px;
+  top: 8vh;
+  left: 43vw;
+  animation-delay: 4.2s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(127) {
+  width: 85px;
+  height: 85px;
+  top: 6vh;
+  left: 76vw;
+  animation-delay: 4.2333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(128) {
+  width: 54px;
+  height: 54px;
+  top: 27vh;
+  left: 85vw;
+  animation-delay: 4.2666666667s;
+  animation-duration: 24s;
+}
+
+.bubble:nth-of-type(129) {
+  width: 115px;
+  height: 115px;
+  top: 82vh;
+  left: 7vw;
+  animation-delay: 4.3s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(130) {
+  width: 50px;
+  height: 50px;
+  top: 60vh;
+  left: 36vw;
+  animation-delay: 4.3333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(131) {
+  width: 128px;
+  height: 128px;
+  top: 94vh;
+  left: 25vw;
+  animation-delay: 4.3666666667s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(132) {
+  width: 117px;
+  height: 117px;
+  top: 16vh;
+  left: 50vw;
+  animation-delay: 4.4s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(133) {
+  width: 67px;
+  height: 67px;
+  top: 79vh;
+  left: 62vw;
+  animation-delay: 4.4333333333s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(134) {
+  width: 35px;
+  height: 35px;
+  top: 69vh;
+  left: 18vw;
+  animation-delay: 4.4666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(135) {
+  width: 58px;
+  height: 58px;
+  top: 98vh;
+  left: 46vw;
+  animation-delay: 4.5s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(136) {
+  width: 96px;
+  height: 96px;
+  top: 98vh;
+  left: 51vw;
+  animation-delay: 4.5333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(137) {
+  width: 89px;
+  height: 89px;
+  top: 15vh;
+  left: 42vw;
+  animation-delay: 4.5666666667s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(138) {
+  width: 18px;
+  height: 18px;
+  top: 11vh;
+  left: 57vw;
+  animation-delay: 4.6s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(139) {
+  width: 70px;
+  height: 70px;
+  top: 82vh;
+  left: 44vw;
+  animation-delay: 4.6333333333s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(140) {
+  width: 104px;
+  height: 104px;
+  top: 65vh;
+  left: 74vw;
+  animation-delay: 4.6666666667s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(141) {
+  width: 70px;
+  height: 70px;
+  top: 99vh;
+  left: 18vw;
+  animation-delay: 4.7s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(142) {
+  width: 66px;
+  height: 66px;
+  top: 63vh;
+  left: 79vw;
+  animation-delay: 4.7333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(143) {
+  width: 74px;
+  height: 74px;
+  top: 6vh;
+  left: 64vw;
+  animation-delay: 4.7666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(144) {
+  width: 103px;
+  height: 103px;
+  top: 95vh;
+  left: 21vw;
+  animation-delay: 4.8s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(145) {
+  width: 14px;
+  height: 14px;
+  top: 37vh;
+  left: 86vw;
+  animation-delay: 4.8333333333s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(146) {
+  width: 94px;
+  height: 94px;
+  top: 32vh;
+  left: 66vw;
+  animation-delay: 4.8666666667s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(147) {
+  width: 35px;
+  height: 35px;
+  top: 37vh;
+  left: 26vw;
+  animation-delay: 4.9s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(148) {
+  width: 114px;
+  height: 114px;
+  top: 97vh;
+  left: 30vw;
+  animation-delay: 4.9333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(149) {
+  width: 1px;
+  height: 1px;
+  top: 70vh;
+  left: 80vw;
+  animation-delay: 4.9666666667s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(150) {
+  width: 113px;
+  height: 113px;
+  top: 26vh;
+  left: 61vw;
+  animation-delay: 5s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(151) {
+  width: 41px;
+  height: 41px;
+  top: 27vh;
+  left: 23vw;
+  animation-delay: 5.0333333333s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(152) {
+  width: 65px;
+  height: 65px;
+  top: 8vh;
+  left: 66vw;
+  animation-delay: 5.0666666667s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(153) {
+  width: 15px;
+  height: 15px;
+  top: 29vh;
+  left: 88vw;
+  animation-delay: 5.1s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(154) {
+  width: 90px;
+  height: 90px;
+  top: 26vh;
+  left: 21vw;
+  animation-delay: 5.1333333333s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(155) {
+  width: 61px;
+  height: 61px;
+  top: 81vh;
+  left: 49vw;
+  animation-delay: 5.1666666667s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(156) {
+  width: 30px;
+  height: 30px;
+  top: 26vh;
+  left: 86vw;
+  animation-delay: 5.2s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(157) {
+  width: 69px;
+  height: 69px;
+  top: 65vh;
+  left: 38vw;
+  animation-delay: 5.2333333333s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(158) {
+  width: 51px;
+  height: 51px;
+  top: 39vh;
+  left: 56vw;
+  animation-delay: 5.2666666667s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(159) {
+  width: 98px;
+  height: 98px;
+  top: 75vh;
+  left: 64vw;
+  animation-delay: 5.3s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(160) {
+  width: 37px;
+  height: 37px;
+  top: 83vh;
+  left: 54vw;
+  animation-delay: 5.3333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(161) {
+  width: 75px;
+  height: 75px;
+  top: 73vh;
+  left: 55vw;
+  animation-delay: 5.3666666667s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(162) {
+  width: 123px;
+  height: 123px;
+  top: 100vh;
+  left: 11vw;
+  animation-delay: 5.4s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(163) {
+  width: 81px;
+  height: 81px;
+  top: 1vh;
+  left: 55vw;
+  animation-delay: 5.4333333333s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(164) {
+  width: 6px;
+  height: 6px;
+  top: 45vh;
+  left: 78vw;
+  animation-delay: 5.4666666667s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(165) {
+  width: 109px;
+  height: 109px;
+  top: 5vh;
+  left: 79vw;
+  animation-delay: 5.5s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(166) {
+  width: 47px;
+  height: 47px;
+  top: 59vh;
+  left: 31vw;
+  animation-delay: 5.5333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(167) {
+  width: 15px;
+  height: 15px;
+  top: 90vh;
+  left: 60vw;
+  animation-delay: 5.5666666667s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(168) {
+  width: 9px;
+  height: 9px;
+  top: 82vh;
+  left: 27vw;
+  animation-delay: 5.6s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(169) {
+  width: 86px;
+  height: 86px;
+  top: 72vh;
+  left: 99vw;
+  animation-delay: 5.6333333333s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(170) {
+  width: 59px;
+  height: 59px;
+  top: 72vh;
+  left: 10vw;
+  animation-delay: 5.6666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(171) {
+  width: 105px;
+  height: 105px;
+  top: 97vh;
+  left: 73vw;
+  animation-delay: 5.7s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(172) {
+  width: 67px;
+  height: 67px;
+  top: 93vh;
+  left: 66vw;
+  animation-delay: 5.7333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(173) {
+  width: 51px;
+  height: 51px;
+  top: 59vh;
+  left: 99vw;
+  animation-delay: 5.7666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(174) {
+  width: 55px;
+  height: 55px;
+  top: 91vh;
+  left: 2vw;
+  animation-delay: 5.8s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(175) {
+  width: 80px;
+  height: 80px;
+  top: 29vh;
+  left: 43vw;
+  animation-delay: 5.8333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(176) {
+  width: 90px;
+  height: 90px;
+  top: 29vh;
+  left: 44vw;
+  animation-delay: 5.8666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(177) {
+  width: 40px;
+  height: 40px;
+  top: 18vh;
+  left: 21vw;
+  animation-delay: 5.9s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(178) {
+  width: 89px;
+  height: 89px;
+  top: 16vh;
+  left: 98vw;
+  animation-delay: 5.9333333333s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(179) {
+  width: 2px;
+  height: 2px;
+  top: 87vh;
+  left: 59vw;
+  animation-delay: 5.9666666667s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(180) {
+  width: 48px;
+  height: 48px;
+  top: 47vh;
+  left: 20vw;
+  animation-delay: 6s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(181) {
+  width: 120px;
+  height: 120px;
+  top: 84vh;
+  left: 96vw;
+  animation-delay: 6.0333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(182) {
+  width: 50px;
+  height: 50px;
+  top: 15vh;
+  left: 94vw;
+  animation-delay: 6.0666666667s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(183) {
+  width: 5px;
+  height: 5px;
+  top: 70vh;
+  left: 15vw;
+  animation-delay: 6.1s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(184) {
+  width: 14px;
+  height: 14px;
+  top: 32vh;
+  left: 71vw;
+  animation-delay: 6.1333333333s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(185) {
+  width: 63px;
+  height: 63px;
+  top: 6vh;
+  left: 2vw;
+  animation-delay: 6.1666666667s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(186) {
+  width: 18px;
+  height: 18px;
+  top: 72vh;
+  left: 29vw;
+  animation-delay: 6.2s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(187) {
+  width: 90px;
+  height: 90px;
+  top: 61vh;
+  left: 15vw;
+  animation-delay: 6.2333333333s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(188) {
+  width: 54px;
+  height: 54px;
+  top: 72vh;
+  left: 12vw;
+  animation-delay: 6.2666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(189) {
+  width: 130px;
+  height: 130px;
+  top: 33vh;
+  left: 89vw;
+  animation-delay: 6.3s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(190) {
+  width: 38px;
+  height: 38px;
+  top: 15vh;
+  left: 44vw;
+  animation-delay: 6.3333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(191) {
+  width: 117px;
+  height: 117px;
+  top: 39vh;
+  left: 62vw;
+  animation-delay: 6.3666666667s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(192) {
+  width: 104px;
+  height: 104px;
+  top: 48vh;
+  left: 14vw;
+  animation-delay: 6.4s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(193) {
+  width: 74px;
+  height: 74px;
+  top: 91vh;
+  left: 85vw;
+  animation-delay: 6.4333333333s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(194) {
+  width: 46px;
+  height: 46px;
+  top: 48vh;
+  left: 100vw;
+  animation-delay: 6.4666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(195) {
+  width: 37px;
+  height: 37px;
+  top: 23vh;
+  left: 59vw;
+  animation-delay: 6.5s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(196) {
+  width: 66px;
+  height: 66px;
+  top: 10vh;
+  left: 99vw;
+  animation-delay: 6.5333333333s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(197) {
+  width: 50px;
+  height: 50px;
+  top: 27vh;
+  left: 31vw;
+  animation-delay: 6.5666666667s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(198) {
+  width: 70px;
+  height: 70px;
+  top: 78vh;
+  left: 98vw;
+  animation-delay: 6.6s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(199) {
+  width: 1px;
+  height: 1px;
+  top: 65vh;
+  left: 95vw;
+  animation-delay: 6.6333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(200) {
+  width: 60px;
+  height: 60px;
+  top: 47vh;
+  left: 67vw;
+  animation-delay: 6.6666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(201) {
+  width: 16px;
+  height: 16px;
+  top: 56vh;
+  left: 71vw;
+  animation-delay: 6.7s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(202) {
+  width: 129px;
+  height: 129px;
+  top: 15vh;
+  left: 2vw;
+  animation-delay: 6.7333333333s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(203) {
+  width: 110px;
+  height: 110px;
+  top: 37vh;
+  left: 40vw;
+  animation-delay: 6.7666666667s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(204) {
+  width: 67px;
+  height: 67px;
+  top: 86vh;
+  left: 5vw;
+  animation-delay: 6.8s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(205) {
+  width: 43px;
+  height: 43px;
+  top: 28vh;
+  left: 51vw;
+  animation-delay: 6.8333333333s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(206) {
+  width: 49px;
+  height: 49px;
+  top: 59vh;
+  left: 87vw;
+  animation-delay: 6.8666666667s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(207) {
+  width: 115px;
+  height: 115px;
+  top: 6vh;
+  left: 91vw;
+  animation-delay: 6.9s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(208) {
+  width: 68px;
+  height: 68px;
+  top: 80vh;
+  left: 46vw;
+  animation-delay: 6.9333333333s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(209) {
+  width: 108px;
+  height: 108px;
+  top: 17vh;
+  left: 88vw;
+  animation-delay: 6.9666666667s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(210) {
+  width: 22px;
+  height: 22px;
+  top: 24vh;
+  left: 83vw;
+  animation-delay: 7s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(211) {
+  width: 129px;
+  height: 129px;
+  top: 75vh;
+  left: 19vw;
+  animation-delay: 7.0333333333s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(212) {
+  width: 1px;
+  height: 1px;
+  top: 66vh;
+  left: 7vw;
+  animation-delay: 7.0666666667s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(213) {
+  width: 130px;
+  height: 130px;
+  top: 54vh;
+  left: 26vw;
+  animation-delay: 7.1s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(214) {
+  width: 99px;
+  height: 99px;
+  top: 15vh;
+  left: 81vw;
+  animation-delay: 7.1333333333s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(215) {
+  width: 71px;
+  height: 71px;
+  top: 45vh;
+  left: 48vw;
+  animation-delay: 7.1666666667s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(216) {
+  width: 31px;
+  height: 31px;
+  top: 94vh;
+  left: 30vw;
+  animation-delay: 7.2s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(217) {
+  width: 109px;
+  height: 109px;
+  top: 45vh;
+  left: 62vw;
+  animation-delay: 7.2333333333s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(218) {
+  width: 125px;
+  height: 125px;
+  top: 62vh;
+  left: 84vw;
+  animation-delay: 7.2666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(219) {
+  width: 62px;
+  height: 62px;
+  top: 90vh;
+  left: 25vw;
+  animation-delay: 7.3s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(220) {
+  width: 79px;
+  height: 79px;
+  top: 32vh;
+  left: 48vw;
+  animation-delay: 7.3333333333s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(221) {
+  width: 55px;
+  height: 55px;
+  top: 89vh;
+  left: 26vw;
+  animation-delay: 7.3666666667s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(222) {
+  width: 7px;
+  height: 7px;
+  top: 41vh;
+  left: 37vw;
+  animation-delay: 7.4s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(223) {
+  width: 51px;
+  height: 51px;
+  top: 7vh;
+  left: 62vw;
+  animation-delay: 7.4333333333s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(224) {
+  width: 22px;
+  height: 22px;
+  top: 18vh;
+  left: 84vw;
+  animation-delay: 7.4666666667s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(225) {
+  width: 96px;
+  height: 96px;
+  top: 79vh;
+  left: 79vw;
+  animation-delay: 7.5s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(226) {
+  width: 107px;
+  height: 107px;
+  top: 8vh;
+  left: 45vw;
+  animation-delay: 7.5333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(227) {
+  width: 112px;
+  height: 112px;
+  top: 14vh;
+  left: 99vw;
+  animation-delay: 7.5666666667s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(228) {
+  width: 11px;
+  height: 11px;
+  top: 23vh;
+  left: 82vw;
+  animation-delay: 7.6s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(229) {
+  width: 79px;
+  height: 79px;
+  top: 25vh;
+  left: 23vw;
+  animation-delay: 7.6333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(230) {
+  width: 123px;
+  height: 123px;
+  top: 23vh;
+  left: 41vw;
+  animation-delay: 7.6666666667s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(231) {
+  width: 119px;
+  height: 119px;
+  top: 7vh;
+  left: 40vw;
+  animation-delay: 7.7s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(232) {
+  width: 127px;
+  height: 127px;
+  top: 26vh;
+  left: 100vw;
+  animation-delay: 7.7333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(233) {
+  width: 50px;
+  height: 50px;
+  top: 9vh;
+  left: 22vw;
+  animation-delay: 7.7666666667s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(234) {
+  width: 79px;
+  height: 79px;
+  top: 69vh;
+  left: 43vw;
+  animation-delay: 7.8s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(235) {
+  width: 119px;
+  height: 119px;
+  top: 92vh;
+  left: 92vw;
+  animation-delay: 7.8333333333s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(236) {
+  width: 32px;
+  height: 32px;
+  top: 99vh;
+  left: 3vw;
+  animation-delay: 7.8666666667s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(237) {
+  width: 93px;
+  height: 93px;
+  top: 95vh;
+  left: 79vw;
+  animation-delay: 7.9s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(238) {
+  width: 24px;
+  height: 24px;
+  top: 96vh;
+  left: 23vw;
+  animation-delay: 7.9333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(239) {
+  width: 66px;
+  height: 66px;
+  top: 89vh;
+  left: 56vw;
+  animation-delay: 7.9666666667s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(240) {
+  width: 109px;
+  height: 109px;
+  top: 75vh;
+  left: 65vw;
+  animation-delay: 8s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(241) {
+  width: 73px;
+  height: 73px;
+  top: 43vh;
+  left: 85vw;
+  animation-delay: 8.0333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(242) {
+  width: 83px;
+  height: 83px;
+  top: 73vh;
+  left: 39vw;
+  animation-delay: 8.0666666667s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(243) {
+  width: 19px;
+  height: 19px;
+  top: 49vh;
+  left: 28vw;
+  animation-delay: 8.1s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(244) {
+  width: 80px;
+  height: 80px;
+  top: 29vh;
+  left: 71vw;
+  animation-delay: 8.1333333333s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(245) {
+  width: 109px;
+  height: 109px;
+  top: 90vh;
+  left: 96vw;
+  animation-delay: 8.1666666667s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(246) {
+  width: 124px;
+  height: 124px;
+  top: 26vh;
+  left: 4vw;
+  animation-delay: 8.2s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(247) {
+  width: 21px;
+  height: 21px;
+  top: 19vh;
+  left: 76vw;
+  animation-delay: 8.2333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(248) {
+  width: 48px;
+  height: 48px;
+  top: 81vh;
+  left: 44vw;
+  animation-delay: 8.2666666667s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(249) {
+  width: 102px;
+  height: 102px;
+  top: 73vh;
+  left: 71vw;
+  animation-delay: 8.3s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(250) {
+  width: 22px;
+  height: 22px;
+  top: 93vh;
+  left: 85vw;
+  animation-delay: 8.3333333333s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(251) {
+  width: 107px;
+  height: 107px;
+  top: 34vh;
+  left: 59vw;
+  animation-delay: 8.3666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(252) {
+  width: 77px;
+  height: 77px;
+  top: 45vh;
+  left: 53vw;
+  animation-delay: 8.4s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(253) {
+  width: 126px;
+  height: 126px;
+  top: 67vh;
+  left: 24vw;
+  animation-delay: 8.4333333333s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(254) {
+  width: 106px;
+  height: 106px;
+  top: 1vh;
+  left: 43vw;
+  animation-delay: 8.4666666667s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(255) {
+  width: 17px;
+  height: 17px;
+  top: 46vh;
+  left: 97vw;
+  animation-delay: 8.5s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(256) {
+  width: 23px;
+  height: 23px;
+  top: 28vh;
+  left: 55vw;
+  animation-delay: 8.5333333333s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(257) {
+  width: 111px;
+  height: 111px;
+  top: 57vh;
+  left: 25vw;
+  animation-delay: 8.5666666667s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(258) {
+  width: 16px;
+  height: 16px;
+  top: 78vh;
+  left: 70vw;
+  animation-delay: 8.6s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(259) {
+  width: 2px;
+  height: 2px;
+  top: 13vh;
+  left: 2vw;
+  animation-delay: 8.6333333333s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(260) {
+  width: 79px;
+  height: 79px;
+  top: 34vh;
+  left: 87vw;
+  animation-delay: 8.6666666667s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(261) {
+  width: 104px;
+  height: 104px;
+  top: 70vh;
+  left: 41vw;
+  animation-delay: 8.7s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(262) {
+  width: 128px;
+  height: 128px;
+  top: 92vh;
+  left: 58vw;
+  animation-delay: 8.7333333333s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(263) {
+  width: 68px;
+  height: 68px;
+  top: 53vh;
+  left: 74vw;
+  animation-delay: 8.7666666667s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(264) {
+  width: 5px;
+  height: 5px;
+  top: 70vh;
+  left: 7vw;
+  animation-delay: 8.8s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(265) {
+  width: 100px;
+  height: 100px;
+  top: 26vh;
+  left: 39vw;
+  animation-delay: 8.8333333333s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(266) {
+  width: 118px;
+  height: 118px;
+  top: 96vh;
+  left: 71vw;
+  animation-delay: 8.8666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(267) {
+  width: 36px;
+  height: 36px;
+  top: 64vh;
+  left: 34vw;
+  animation-delay: 8.9s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(268) {
+  width: 112px;
+  height: 112px;
+  top: 41vh;
+  left: 92vw;
+  animation-delay: 8.9333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(269) {
+  width: 90px;
+  height: 90px;
+  top: 38vh;
+  left: 14vw;
+  animation-delay: 8.9666666667s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(270) {
+  width: 102px;
+  height: 102px;
+  top: 72vh;
+  left: 96vw;
+  animation-delay: 9s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(271) {
+  width: 16px;
+  height: 16px;
+  top: 57vh;
+  left: 85vw;
+  animation-delay: 9.0333333333s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(272) {
+  width: 96px;
+  height: 96px;
+  top: 11vh;
+  left: 41vw;
+  animation-delay: 9.0666666667s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(273) {
+  width: 62px;
+  height: 62px;
+  top: 66vh;
+  left: 29vw;
+  animation-delay: 9.1s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(274) {
+  width: 27px;
+  height: 27px;
+  top: 34vh;
+  left: 15vw;
+  animation-delay: 9.1333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(275) {
+  width: 129px;
+  height: 129px;
+  top: 5vh;
+  left: 87vw;
+  animation-delay: 9.1666666667s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(276) {
+  width: 10px;
+  height: 10px;
+  top: 65vh;
+  left: 52vw;
+  animation-delay: 9.2s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(277) {
+  width: 34px;
+  height: 34px;
+  top: 69vh;
+  left: 100vw;
+  animation-delay: 9.2333333333s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(278) {
+  width: 124px;
+  height: 124px;
+  top: 60vh;
+  left: 72vw;
+  animation-delay: 9.2666666667s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(279) {
+  width: 101px;
+  height: 101px;
+  top: 33vh;
+  left: 22vw;
+  animation-delay: 9.3s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(280) {
+  width: 113px;
+  height: 113px;
+  top: 88vh;
+  left: 17vw;
+  animation-delay: 9.3333333333s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(281) {
+  width: 75px;
+  height: 75px;
+  top: 66vh;
+  left: 89vw;
+  animation-delay: 9.3666666667s;
+  animation-duration: 21s;
+}
+
+.bubble:nth-of-type(282) {
+  width: 47px;
+  height: 47px;
+  top: 7vh;
+  left: 98vw;
+  animation-delay: 9.4s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(283) {
+  width: 125px;
+  height: 125px;
+  top: 86vh;
+  left: 85vw;
+  animation-delay: 9.4333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(284) {
+  width: 129px;
+  height: 129px;
+  top: 92vh;
+  left: 93vw;
+  animation-delay: 9.4666666667s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(285) {
+  width: 55px;
+  height: 55px;
+  top: 42vh;
+  left: 49vw;
+  animation-delay: 9.5s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(286) {
+  width: 113px;
+  height: 113px;
+  top: 43vh;
+  left: 57vw;
+  animation-delay: 9.5333333333s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(287) {
+  width: 94px;
+  height: 94px;
+  top: 55vh;
+  left: 16vw;
+  animation-delay: 9.5666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(288) {
+  width: 14px;
+  height: 14px;
+  top: 50vh;
+  left: 31vw;
+  animation-delay: 9.6s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(289) {
+  width: 100px;
+  height: 100px;
+  top: 54vh;
+  left: 66vw;
+  animation-delay: 9.6333333333s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(290) {
+  width: 81px;
+  height: 81px;
+  top: 41vh;
+  left: 84vw;
+  animation-delay: 9.6666666667s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(291) {
+  width: 42px;
+  height: 42px;
+  top: 70vh;
+  left: 82vw;
+  animation-delay: 9.7s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(292) {
+  width: 1px;
+  height: 1px;
+  top: 50vh;
+  left: 91vw;
+  animation-delay: 9.7333333333s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(293) {
+  width: 77px;
+  height: 77px;
+  top: 94vh;
+  left: 40vw;
+  animation-delay: 9.7666666667s;
+  animation-duration: 12s;
+}
+
+.bubble:nth-of-type(294) {
+  width: 7px;
+  height: 7px;
+  top: 80vh;
+  left: 54vw;
+  animation-delay: 9.8s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(295) {
+  width: 11px;
+  height: 11px;
+  top: 40vh;
+  left: 31vw;
+  animation-delay: 9.8333333333s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(296) {
+  width: 94px;
+  height: 94px;
+  top: 35vh;
+  left: 41vw;
+  animation-delay: 9.8666666667s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(297) {
+  width: 91px;
+  height: 91px;
+  top: 75vh;
+  left: 18vw;
+  animation-delay: 9.9s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(298) {
+  width: 14px;
+  height: 14px;
+  top: 50vh;
+  left: 64vw;
+  animation-delay: 9.9333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(299) {
+  width: 94px;
+  height: 94px;
+  top: 89vh;
+  left: 8vw;
+  animation-delay: 9.9666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(300) {
+  width: 76px;
+  height: 76px;
+  top: 17vh;
+  left: 57vw;
+  animation-delay: 10s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(301) {
+  width: 118px;
+  height: 118px;
+  top: 55vh;
+  left: 50vw;
+  animation-delay: 10.0333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(302) {
+  width: 48px;
+  height: 48px;
+  top: 20vh;
+  left: 88vw;
+  animation-delay: 10.0666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(303) {
+  width: 128px;
+  height: 128px;
+  top: 63vh;
+  left: 71vw;
+  animation-delay: 10.1s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(304) {
+  width: 98px;
+  height: 98px;
+  top: 41vh;
+  left: 39vw;
+  animation-delay: 10.1333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(305) {
+  width: 90px;
+  height: 90px;
+  top: 42vh;
+  left: 8vw;
+  animation-delay: 10.1666666667s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(306) {
+  width: 126px;
+  height: 126px;
+  top: 21vh;
+  left: 94vw;
+  animation-delay: 10.2s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(307) {
+  width: 5px;
+  height: 5px;
+  top: 94vh;
+  left: 100vw;
+  animation-delay: 10.2333333333s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(308) {
+  width: 129px;
+  height: 129px;
+  top: 3vh;
+  left: 42vw;
+  animation-delay: 10.2666666667s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(309) {
+  width: 19px;
+  height: 19px;
+  top: 98vh;
+  left: 66vw;
+  animation-delay: 10.3s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(310) {
+  width: 83px;
+  height: 83px;
+  top: 3vh;
+  left: 17vw;
+  animation-delay: 10.3333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(311) {
+  width: 40px;
+  height: 40px;
+  top: 18vh;
+  left: 78vw;
+  animation-delay: 10.3666666667s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(312) {
+  width: 41px;
+  height: 41px;
+  top: 87vh;
+  left: 43vw;
+  animation-delay: 10.4s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(313) {
+  width: 5px;
+  height: 5px;
+  top: 71vh;
+  left: 56vw;
+  animation-delay: 10.4333333333s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(314) {
+  width: 130px;
+  height: 130px;
+  top: 24vh;
+  left: 56vw;
+  animation-delay: 10.4666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(315) {
+  width: 15px;
+  height: 15px;
+  top: 29vh;
+  left: 54vw;
+  animation-delay: 10.5s;
+  animation-duration: 10s;
+}
+
+.bubble:nth-of-type(316) {
+  width: 59px;
+  height: 59px;
+  top: 58vh;
+  left: 53vw;
+  animation-delay: 10.5333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(317) {
+  width: 20px;
+  height: 20px;
+  top: 15vh;
+  left: 13vw;
+  animation-delay: 10.5666666667s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(318) {
+  width: 27px;
+  height: 27px;
+  top: 67vh;
+  left: 44vw;
+  animation-delay: 10.6s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(319) {
+  width: 21px;
+  height: 21px;
+  top: 69vh;
+  left: 48vw;
+  animation-delay: 10.6333333333s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(320) {
+  width: 16px;
+  height: 16px;
+  top: 67vh;
+  left: 80vw;
+  animation-delay: 10.6666666667s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(321) {
+  width: 18px;
+  height: 18px;
+  top: 76vh;
+  left: 88vw;
+  animation-delay: 10.7s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(322) {
+  width: 6px;
+  height: 6px;
+  top: 73vh;
+  left: 35vw;
+  animation-delay: 10.7333333333s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(323) {
+  width: 118px;
+  height: 118px;
+  top: 86vh;
+  left: 6vw;
+  animation-delay: 10.7666666667s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(324) {
+  width: 90px;
+  height: 90px;
+  top: 78vh;
+  left: 23vw;
+  animation-delay: 10.8s;
+  animation-duration: 22s;
+}
+
+.bubble:nth-of-type(325) {
+  width: 5px;
+  height: 5px;
+  top: 54vh;
+  left: 55vw;
+  animation-delay: 10.8333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(326) {
+  width: 93px;
+  height: 93px;
+  top: 86vh;
+  left: 67vw;
+  animation-delay: 10.8666666667s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(327) {
+  width: 122px;
+  height: 122px;
+  top: 52vh;
+  left: 6vw;
+  animation-delay: 10.9s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(328) {
+  width: 78px;
+  height: 78px;
+  top: 40vh;
+  left: 89vw;
+  animation-delay: 10.9333333333s;
+  animation-duration: 35s;
+}
+
+.bubble:nth-of-type(329) {
+  width: 107px;
+  height: 107px;
+  top: 7vh;
+  left: 15vw;
+  animation-delay: 10.9666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(330) {
+  width: 95px;
+  height: 95px;
+  top: 44vh;
+  left: 55vw;
+  animation-delay: 11s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(331) {
+  width: 26px;
+  height: 26px;
+  top: 96vh;
+  left: 53vw;
+  animation-delay: 11.0333333333s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(332) {
+  width: 87px;
+  height: 87px;
+  top: 69vh;
+  left: 74vw;
+  animation-delay: 11.0666666667s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(333) {
+  width: 55px;
+  height: 55px;
+  top: 18vh;
+  left: 16vw;
+  animation-delay: 11.1s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(334) {
+  width: 105px;
+  height: 105px;
+  top: 57vh;
+  left: 20vw;
+  animation-delay: 11.1333333333s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(335) {
+  width: 34px;
+  height: 34px;
+  top: 25vh;
+  left: 35vw;
+  animation-delay: 11.1666666667s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(336) {
+  width: 28px;
+  height: 28px;
+  top: 78vh;
+  left: 44vw;
+  animation-delay: 11.2s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(337) {
+  width: 34px;
+  height: 34px;
+  top: 41vh;
+  left: 61vw;
+  animation-delay: 11.2333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(338) {
+  width: 23px;
+  height: 23px;
+  top: 75vh;
+  left: 53vw;
+  animation-delay: 11.2666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(339) {
+  width: 38px;
+  height: 38px;
+  top: 63vh;
+  left: 8vw;
+  animation-delay: 11.3s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(340) {
+  width: 83px;
+  height: 83px;
+  top: 76vh;
+  left: 87vw;
+  animation-delay: 11.3333333333s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(341) {
+  width: 14px;
+  height: 14px;
+  top: 14vh;
+  left: 55vw;
+  animation-delay: 11.3666666667s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(342) {
+  width: 84px;
+  height: 84px;
+  top: 52vh;
+  left: 87vw;
+  animation-delay: 11.4s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(343) {
+  width: 111px;
+  height: 111px;
+  top: 2vh;
+  left: 65vw;
+  animation-delay: 11.4333333333s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(344) {
+  width: 81px;
+  height: 81px;
+  top: 25vh;
+  left: 12vw;
+  animation-delay: 11.4666666667s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(345) {
+  width: 21px;
+  height: 21px;
+  top: 55vh;
+  left: 8vw;
+  animation-delay: 11.5s;
+  animation-duration: 29s;
+}
+
+.bubble:nth-of-type(346) {
+  width: 32px;
+  height: 32px;
+  top: 14vh;
+  left: 92vw;
+  animation-delay: 11.5333333333s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(347) {
+  width: 117px;
+  height: 117px;
+  top: 80vh;
+  left: 53vw;
+  animation-delay: 11.5666666667s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(348) {
+  width: 11px;
+  height: 11px;
+  top: 41vh;
+  left: 88vw;
+  animation-delay: 11.6s;
+  animation-duration: 30s;
+}
+
+.bubble:nth-of-type(349) {
+  width: 40px;
+  height: 40px;
+  top: 30vh;
+  left: 14vw;
+  animation-delay: 11.6333333333s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(350) {
+  width: 62px;
+  height: 62px;
+  top: 70vh;
+  left: 75vw;
+  animation-delay: 11.6666666667s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(351) {
+  width: 21px;
+  height: 21px;
+  top: 87vh;
+  left: 22vw;
+  animation-delay: 11.7s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(352) {
+  width: 130px;
+  height: 130px;
+  top: 76vh;
+  left: 44vw;
+  animation-delay: 11.7333333333s;
+  animation-duration: 32s;
+}
+
+.bubble:nth-of-type(353) {
+  width: 30px;
+  height: 30px;
+  top: 100vh;
+  left: 6vw;
+  animation-delay: 11.7666666667s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(354) {
+  width: 122px;
+  height: 122px;
+  top: 51vh;
+  left: 82vw;
+  animation-delay: 11.8s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(355) {
+  width: 80px;
+  height: 80px;
+  top: 4vh;
+  left: 93vw;
+  animation-delay: 11.8333333333s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(356) {
+  width: 48px;
+  height: 48px;
+  top: 22vh;
+  left: 94vw;
+  animation-delay: 11.8666666667s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(357) {
+  width: 17px;
+  height: 17px;
+  top: 41vh;
+  left: 27vw;
+  animation-delay: 11.9s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(358) {
+  width: 46px;
+  height: 46px;
+  top: 47vh;
+  left: 80vw;
+  animation-delay: 11.9333333333s;
+  animation-duration: 15s;
+}
+
+.bubble:nth-of-type(359) {
+  width: 126px;
+  height: 126px;
+  top: 40vh;
+  left: 92vw;
+  animation-delay: 11.9666666667s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(360) {
+  width: 26px;
+  height: 26px;
+  top: 40vh;
+  left: 50vw;
+  animation-delay: 12s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(361) {
+  width: 22px;
+  height: 22px;
+  top: 1vh;
+  left: 81vw;
+  animation-delay: 12.0333333333s;
+  animation-duration: 25s;
+}
+
+.bubble:nth-of-type(362) {
+  width: 24px;
+  height: 24px;
+  top: 96vh;
+  left: 81vw;
+  animation-delay: 12.0666666667s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(363) {
+  width: 129px;
+  height: 129px;
+  top: 1vh;
+  left: 7vw;
+  animation-delay: 12.1s;
+  animation-duration: 20s;
+}
+
+.bubble:nth-of-type(364) {
+  width: 93px;
+  height: 93px;
+  top: 75vh;
+  left: 60vw;
+  animation-delay: 12.1333333333s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-of-type(365) {
+  width: 42px;
+  height: 42px;
+  top: 15vh;
+  left: 67vw;
+  animation-delay: 12.1666666667s;
+  animation-duration: 27s;
+}
+
+.bubble:nth-of-type(366) {
+  width: 53px;
+  height: 53px;
+  top: 95vh;
+  left: 6vw;
+  animation-delay: 12.2s;
+  animation-duration: 23s;
+}
+
+.bubble:nth-of-type(367) {
+  width: 102px;
+  height: 102px;
+  top: 79vh;
+  left: 25vw;
+  animation-delay: 12.2333333333s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(368) {
+  width: 23px;
+  height: 23px;
+  top: 86vh;
+  left: 81vw;
+  animation-delay: 12.2666666667s;
+  animation-duration: 16s;
+}
+
+.bubble:nth-of-type(369) {
+  width: 80px;
+  height: 80px;
+  top: 96vh;
+  left: 10vw;
+  animation-delay: 12.3s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(370) {
+  width: 11px;
+  height: 11px;
+  top: 51vh;
+  left: 59vw;
+  animation-delay: 12.3333333333s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-of-type(371) {
+  width: 32px;
+  height: 32px;
+  top: 31vh;
+  left: 12vw;
+  animation-delay: 12.3666666667s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(372) {
+  width: 27px;
+  height: 27px;
+  top: 29vh;
+  left: 16vw;
+  animation-delay: 12.4s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-of-type(373) {
+  width: 50px;
+  height: 50px;
+  top: 19vh;
+  left: 29vw;
+  animation-delay: 12.4333333333s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(374) {
+  width: 65px;
+  height: 65px;
+  top: 53vh;
+  left: 14vw;
+  animation-delay: 12.4666666667s;
+  animation-duration: 34s;
+}
+
+.bubble:nth-of-type(375) {
+  width: 32px;
+  height: 32px;
+  top: 39vh;
+  left: 95vw;
+  animation-delay: 12.5s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(376) {
+  width: 51px;
+  height: 51px;
+  top: 95vh;
+  left: 53vw;
+  animation-delay: 12.5333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(377) {
+  width: 24px;
+  height: 24px;
+  top: 38vh;
+  left: 62vw;
+  animation-delay: 12.5666666667s;
+  animation-duration: 14s;
+}
+
+.bubble:nth-of-type(378) {
+  width: 123px;
+  height: 123px;
+  top: 58vh;
+  left: 67vw;
+  animation-delay: 12.6s;
+  animation-duration: 28s;
+}
+
+.bubble:nth-of-type(379) {
+  width: 70px;
+  height: 70px;
+  top: 5vh;
+  left: 76vw;
+  animation-delay: 12.6333333333s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(380) {
+  width: 110px;
+  height: 110px;
+  top: 17vh;
+  left: 23vw;
+  animation-delay: 12.6666666667s;
+  animation-duration: 31s;
+}
+
+.bubble:nth-of-type(381) {
+  width: 12px;
+  height: 12px;
+  top: 19vh;
+  left: 84vw;
+  animation-delay: 12.7s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(382) {
+  width: 114px;
+  height: 114px;
+  top: 80vh;
+  left: 44vw;
+  animation-delay: 12.7333333333s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-of-type(383) {
+  width: 93px;
+  height: 93px;
+  top: 61vh;
+  left: 50vw;
+  animation-delay: 12.7666666667s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-of-type(384) {
+  width: 40px;
+  height: 40px;
+  top: 19vh;
+  left: 63vw;
+  animation-delay: 12.8s;
+  animation-duration: 19s;
+}
+
+.bubble:nth-of-type(385) {
+  width: 25px;
+  height: 25px;
+  top: 27vh;
+  left: 58vw;
+  animation-delay: 12.8333333333s;
+  animation-duration: 11s;
+}
+
+.bubble:nth-of-type(386) {
+  width: 68px;
+  height: 68px;
+  top: 5vh;
+  left: 54vw;
+  animation-delay: 12.8666666667s;
+  animation-duration: 33s;
+}
+
+.bubble:nth-of-type(387) {
+  width: 25px;
+  height: 25px;
+  top: 32vh;
+  left: 49vw;
+  animation-delay: 12.9s;
+  animation-duration: 36s;
+}
+
+.bubble:nth-of-type(388) {
+  width: 72px;
+  height: 72px;
+  top: 27vh;
+  left: 11vw;
+  animation-delay: 12.9333333333s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(389) {
+  width: 96px;
+  height: 96px;
+  top: 67vh;
+  left: 57vw;
+  animation-delay: 12.9666666667s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(390) {
+  width: 62px;
+  height: 62px;
+  top: 74vh;
+  left: 41vw;
+  animation-delay: 13s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(391) {
+  width: 121px;
+  height: 121px;
+  top: 74vh;
+  left: 12vw;
+  animation-delay: 13.0333333333s;
+  animation-duration: 37s;
+}
+
+.bubble:nth-of-type(392) {
+  width: 78px;
+  height: 78px;
+  top: 63vh;
+  left: 86vw;
+  animation-delay: 13.0666666667s;
+  animation-duration: 18s;
+}
+
+.bubble:nth-of-type(393) {
+  width: 59px;
+  height: 59px;
+  top: 98vh;
+  left: 15vw;
+  animation-delay: 13.1s;
+  animation-duration: 3s;
+}
+
+.bubble:nth-of-type(394) {
+  width: 13px;
+  height: 13px;
+  top: 74vh;
+  left: 54vw;
+  animation-delay: 13.1333333333s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(395) {
+  width: 41px;
+  height: 41px;
+  top: 7vh;
+  left: 34vw;
+  animation-delay: 13.1666666667s;
+  animation-duration: 17s;
+}
+
+.bubble:nth-of-type(396) {
+  width: 99px;
+  height: 99px;
+  top: 71vh;
+  left: 62vw;
+  animation-delay: 13.2s;
+  animation-duration: 24s;
+}
+
+.bubble:nth-of-type(397) {
+  width: 53px;
+  height: 53px;
+  top: 12vh;
+  left: 31vw;
+  animation-delay: 13.2333333333s;
+  animation-duration: 26s;
+}
+
+.bubble:nth-of-type(398) {
+  width: 70px;
+  height: 70px;
+  top: 33vh;
+  left: 30vw;
+  animation-delay: 13.2666666667s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-of-type(399) {
+  width: 12px;
+  height: 12px;
+  top: 46vh;
+  left: 55vw;
+  animation-delay: 13.3s;
+  animation-duration: 13s;
+}
+
+.bubble:nth-of-type(400) {
+  width: 72px;
+  height: 72px;
+  top: 99vh;
+  left: 73vw;
+  animation-delay: 13.3333333333s;
+  animation-duration: 33s;
+}
+
+@keyframes bubbles {
+  100% {
+    transform: translateY(-900px) scale(1) rotate(360deg);
+  }
+}

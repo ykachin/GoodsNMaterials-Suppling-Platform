@@ -1,11 +1,11 @@
 <template>
   <div class="headbody">
     <a class="opleft">&emsp;&emsp;</a>
-    <a class="op1">物资共享平台</a>
+    <a class="op1">须臾疫物</a>
     <a class="op"  @click="f1">需求方</a>
     <a class="op"  @click="f3">提供方</a>
     <a class="op"  @click="f4">疫情地图</a>
-    <a class="op"  @click="f5">个人捐赠</a>
+    <a class="op"  @click="f5">捐赠渠道</a>
     <a class="op"  @click="f6">个人主页</a>
     <el-dropdown class="op2">
       <span class="el-dropdown-link" v-if="!showDefaut">

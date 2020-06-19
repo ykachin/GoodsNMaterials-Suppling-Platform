@@ -1,47 +1,176 @@
 <template>
     <div>
+      <div class="nmsl bubbles">
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+
+      </div>
       <myhead></myhead>
       <!--主体-->
+
+
       <div>
         <!--<div  class="m-container m-padded-tb-big animated fadeIn need-bg" style="height:400px; background:url(../../../static/images/needer.jpg)no-repeat;background-size:100%,400px">-->
-        <div  class="m-container m-padded-tb-big animated fadeIn need-bg" >
-          <div class="eight wide column">
-            <div class="ui stackable grid">
-              <div class="wide column two-size-center">
-                <div style="margin-top:100px">
+        <div  class="m-container m-padded-tb-big animated fadeIn" >
+          <div class="ui container need-bg">
+            <div class="ui stackable grid ">
+              <div class="sixteen wide column two-size-center">
+                <div style="margin-top:200px">
                   <nav class="mainNavs">
-                    <a class="ui big-font" style="color: yellow">物资共享平台</a>
+                    <!--<a class="ui big-font" style="color: yellow">物资共享平台</a>-->
+                    <div class="ui big-font animate one" style="color: yellow">
+                      <span>物</span><span>资</span><span>共</span><span>享</span><span>平</span><span>台</span>
+
+
+                    </div>
                   </nav>
                   <br>
                   <br>
-                  <div class="right m-item item m-mobile-hide">
+                  <!--<div class="right m-item item m-mobile-hide">
                     <form name="search" action="#"  method="post" target="_blank">
                       <div class="ui icon inverted white input m-margin-tb-tiny">
                         <input type="text" name="query" :query='query' v-model="query"  placeholder="模糊搜索物资，多种物资逗号隔开......" style="width: 500px">
                         <i @click="search" class="search link icon"></i>
                       </div>
                     </form>
-                  </div>
+                  </div>-->
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div  class="m-container m-padded-tb-big animated fadeIn ">
+        <div  class="m-container m-padded-tb animated fadeIn ">
           <div class="ui container">
             <div class="ui stackable grid">
 
               <!--左边广场列表-->
               <div class="sixteen wide column" >
+                <!--<div class="animate one">
+                  <span>c</span><span>s</span><span>s</span><span>3</span>  
+                  <span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+
+                  <a class="repeat" href="javascript:void(0);">Repeat Animation</a>
+                </div>-->
+                <!--<div class="need-bg">
+                  <div style="margin-top:100px">
+                    <nav class="mainNavs">
+                      <a class="ui big-font" style="color: yellow">物资共享平台</a>
+                    </nav>
+                    <br>
+                    <br>
+                    <div class="right m-item item m-mobile-hide">
+                      <form name="search" action="#"  method="post" target="_blank">
+                        <div class="ui icon inverted white input m-margin-tb-tiny">
+                          <input type="text" name="query" :query='query' v-model="query"  placeholder="模糊搜索物资，多种物资逗号隔开......" style="width: 500px">
+                          <i @click="search" class="search link icon"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>-->
                 <!--header-->
                   <div class="ui left aligned one column grid" >
                     <div class="column">
                       <div class="ui raised segment">
-                        <span class="ui inverted blue button">全部</span>
+                        <span class="ui inverted blue button" @click="reloadAgain">全部</span>
                         <span class="ui inverted blue button" style="margin-right: 55%" @click="canIPost">我要发布</span>
 
-                        <el-dialog title="发布需求" :visible.sync="addNeedStatus" width="60%" center>
+                        <el-dialog :modal-append-to-body=false title="发布需求" :visible.sync="addNeedStatus" width="60%" center>
                           <el-form :model="ruleForm" status-icon :rules="formRules" label-width="100px" ref="ruleForm" class="demo-ruleForm">
                             <el-form-item label="我的账号" prop="username">
                               <el-input v-model="username" disabled></el-input>
@@ -60,11 +189,12 @@
                                   </el-option>&ndash;&gt;
                                 </el-select>-->
                               <el-button type="primary" @click="focuseInputGoods()">点击选择物资</el-button><br/>
-                              <el-dialog title="需求" :visible.sync="needInput">
+                              <el-dialog :modal-append-to-body=true append-to-body title="需求" :visible.sync="needInput">
                                 <el-tree
                                   :props="props"
                                   :load="loadNode"
                                   lazy
+                                  :check-strictly="true"
                                   show-checkbox
                                   @check-change="handleCheckChangeInupt">
                                 </el-tree>
@@ -73,7 +203,9 @@
                                 <el-tag
                                   class="m-margin-top"
                                   :key="tag.productName"
-                                  closable>
+                                  closable
+                                  @close="handlePostClose(tag.name)"
+                                  >
                                 {{tag.productName}}
                                 </el-tag>
                                 数量：<el-input style="width:90px" v-model="tag.productCount"></el-input>
@@ -145,31 +277,77 @@
                       class="m-margin-top"
                       v-for="tag in searchList"
                       :key="tag.name"
-                      closable>
+                      closable
+                      @close="handleClose(tag.name)">
                       {{tag.name}}
                     </el-tag>
                   </div>
                 </div>
 
                 <el-dialog title="需求" :visible.sync="needSearch">
-                  <el-tree
+                  <!--<el-tree
                     :props="props"
                     :load="loadNode"
                     lazy
                     ref="tree"
                     show-checkbox
                     @check-change="handleCheckChange">
+                  </el-tree>-->
+                  <el-tree
+                    :props="props"
+                    :load="loadNode"
+                    lazy
+                    :check-strictly="true"
+                    ref="tree"
+                    show-checkbox
+                    @check-change="handleCheckChange">
                   </el-tree>
+
                 </el-dialog>
 
+
                 <!--content-->
-                <div class="ui attached  segment m-margin-top " style="border-radius: 15px" v-for="(item,index) in needList">
-                  <div class="ui padded vertical segment" >
+                <!--<div id="square" class="container animated"></div>-->
+                <!--<div class="main-container">
+                  <div class="left-container">
+                    <div class="title">
+                      <p><span>作品:</span><br />尊重妇女</p>
+                      <div class="line"></div>
+                    </div>
+                    <div class="profile">
+                      <img src="img/320755dbe6849f1c26308e67c5eb2b67.jpeg" alt="user-avatar" />
+                      <p class="username">John Hanson</p>
+                    </div>
+                  </div>
+
+                  <div class="right-container">
+                    <div class="text">
+                      <p>
+                        <span>T</span>he desire to be respected by someone of the opposite
+                        sex is something that runs deep within everyone, even though most
+                        <br /><br />适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a>
+                      </p>
+                    </div>
+                    <div class="footer">
+                      <p class="date">2020 5月07日 星期二 - <strong>18:00</strong></p>
+                      <div class="comments">
+                        <img src="static/images/KvP.svg" alt="comment-icon" />
+                        <p class="comment-count">23</p>
+                        <img src="static/images/Kuh.svg" alt="more-icon" />
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
+
+                <div class="m-margin-top " style="border-radius: 15px" v-for="(item,index) in needList">
+                  <!--<div class="ui padded vertical segment container animated" >
                     <div class="ui  mobile reversed stackable grid" >
                       <div class="forteen wide column left aligned " >
-                        <h3 class="ui header left aligned" ><a   target="_blank" class="m-black" >来自{{item.city}}{{item.companyName}}的需求通知</a></h3>
-                        紧急程度：{{item.emergencyValue}}&emsp;&emsp;
-                        <el-button type="primary" size="mini" @click="Addemergency(item.needId)">加急</el-button>
+                        <h3 class="ui header left aligned" ><a   target="_blank" class="m-black" >{{item.city}}{{item.companyName}}</a></h3>
+                        紧急程度：<i v-for="count in item.emergencyValue"><img src="static/images/star.png"></img></i>
+                        <el-button type="primary" size="mini" @click="Addemergency(item.needId)" v-if="myId==item.userId">加急</el-button>
+                        <el-button type="primary" size="mini" @click="deletePost(item.needId)" v-if="myId==item.userId">删除</el-button>
+                        <el-button type="primary" size="mini" v-if="item.finish" disabled>已完成</el-button>
                         <el-card shadow="hover" style="background-color: white" class="m-margin-top-small">
                           {{item.detail}}
                           <el-collapse v-model="activeNames" >
@@ -202,6 +380,52 @@
                         </div>
                       </div>
                     </div>
+                  </div>-->
+                  <div class="main-container container animated">
+                    <div class="left-container" style="background-color: #2c3e50">
+                      <div class="title">
+                        <p><span>{{item.city}}</span><br />{{item.companyName}}</p>
+                        <div class="line">紧急程度：<i v-for="count in item.emergencyValue"><img src="static/images/star.png"></img></i></div>
+                      </div>
+
+                      <div class="profile">
+
+                        <el-button type="primary" size="mini" @click="Addemergency(item.needId)" v-if="myId==item.userId">加急</el-button>
+                        <el-button type="primary" size="mini" @click="deletePost(item.needId)" v-if="myId==item.userId">删除</el-button>
+                        <el-button type="primary" size="mini" v-if="item.finish" disabled>已完成</el-button>
+
+                      </div>
+                    </div>
+
+                    <div class="right-container">
+                      <div class="text">
+
+                        <div>
+                          需要物资：<el-button style="margin-left: 10px" type="primary" size="medium" disabled v-for="(item2,index2) in item.needProductsList">{{item2.productName}}:{{item2.productCount}}</el-button>
+                        </div>
+                        <div class="m-margin-top-large">
+                          备注：{{item.detail}}
+                        </div>
+                        <div class="m-margin-top">
+                          <i class="home icon"></i><span >位置：{{item.province}}{{item.street}}</span>
+                          <i class="calendar icon"></i><span >更新时间：{{item.updateTime}}</span>
+                        </div>
+
+                      </div>
+                      <div class="footer">
+                        <!--<p class="date">2020 5月07日 星期二 - <strong>18:00</strong></p>
+                        <div class="comments">
+                          <img src="static/images/KvP.svg" alt="comment-icon" />
+                          <p class="comment-count">23</p>
+                          <img src="static/images/Kuh.svg" alt="more-icon" />
+                        </div>-->
+                        <a>联系人：{{item.contactName}}</a>
+                        <a  class="header"  >联系方式：{{item.contactMedia}}</a>
+                        <a  class="header"  >联系电话：{{item.contactPhone}}</a>
+
+                      </div>
+
+                    </div>
                   </div>
                 </div>
                 <!--footer-->
@@ -233,7 +457,7 @@
     import myhead from "../myhead";
     import myfoot from "../myfoot";
     import VDistpicker from 'v-distpicker'
-
+    import bg from '../../../static/js/bg_script'
     export default {
       inject:['reload'],
       data() {
@@ -276,6 +500,48 @@
         };
 
         return {
+          //数据
+          data: [{
+            label: '一级 1',
+            children: [{
+              label: '二级 1-1',
+              children: [{
+                label: '三级 1-1-1'
+              }]
+            }]
+          }, {
+            label: '一级 2',
+            children: [{
+              label: '二级 2-1',
+              children: [{
+                label: '三级 2-1-1'
+              }]
+            }, {
+              label: '二级 2-2',
+              children: [{
+                label: '三级 2-2-1'
+              }]
+            }]
+          }, {
+            label: '一级 3',
+            children: [{
+              label: '二级 3-1',
+              children: [{
+                label: '三级 3-1-1'
+              }]
+            }, {
+              label: '二级 3-2',
+              children: [{
+                label: '三级 3-2-1'
+              }]
+            }]
+          }],
+          defaultProps: {
+            children: 'children',
+            label: 'label'
+          },
+
+          myId:window.sessionStorage.getItem('user_id'),
           //showTags or not
           showTags : false,
           //addpostNeedList
@@ -344,6 +610,62 @@
       },
       methods:{
         /*
+        *@function:removePostTag
+        * @param:tagName
+        */
+        handlePostClose(tagName){
+          for(var c in this.addpostNeedList){
+            if(this.addpostNeedList[c].name===tagName){
+              this.addpostNeedList.splice(c,1)
+            }
+          }
+        },
+        /*
+        *@function:reload
+        * @param:null
+        */
+        reloadAgain(){
+          this.reload()
+        },
+        /*
+        *@function:removeTag
+        * @param:tagName
+        */
+        handleClose(tagName){
+          for(var c in this.searchList){
+            if(this.searchList[c].name===tagName){
+              this.searchList.splice(c,1)
+            }
+          }
+          this.searchListOnlyString = this.searchListOnlyString.filter(item => item !== tagName);
+        },
+        /*
+        *@function:deletePost
+        * @param:needId
+        */
+        deletePost(needId){
+          const _this=this
+          let param={needId:needId}
+          console.log("删除函数的参数：",param)
+          _this.$axios({
+            method: 'delete',
+            url: '/api/need/deleteMyNeed?needId='+needId,
+            /*data: _this.$qs.stringify(param),*/
+          }).then(function (res) {
+            if(res.data.status===200){
+              _this.$message.success('删除成功！')
+              console.log("删除成功:",res)
+              _this.reload()           }
+            else{
+              _this.$message.error('删除失败！'+res.data.msg)
+              console.log("删除失败:",res.data.msg)
+            }
+          }).catch(function (res) {
+            _this.$message.error('删除失败！')
+            console.log("删除失败:",res)
+          })
+        },
+        /*
         *@function:post myNeed
         * @param:null
         */
@@ -388,7 +710,7 @@
             url: '/api/companyType',
           }).then(function (res) {
             _this.companyList=res.data.data
-            _this.$message.success("获取所有机构成功！")
+            // _this.$message.success("获取所有机构成功！")
             console.log("获取所有机构成功:",res)
           }).catch(function (res) {
             _this.$message.error('获取所有机构失败！')
@@ -487,7 +809,7 @@
             method: 'post',
             url: '/api/need/getNeedNums',
           }).then(function (res) {
-            _this.$message.success('获取需求总数成功！')
+            // _this.$message.success('获取需求总数成功！')
             console.log("获取需求总数成功:",res)
             _this.totolNeedNum=res.data.data
           }).catch(function (res) {
@@ -507,7 +829,7 @@
             url: '/api/need/getNeedList',
             data: this.$qs.stringify(param),
           }).then(function (res) {
-            _this.$message.success('获取需求List成功！')
+            // _this.$message.success('获取需求List成功！')
             console.log("获取需求List成功:",res)
             _this.needList=res.data.data
           }).catch(function (res) {
@@ -520,6 +842,11 @@
             console.log(data.name);
             this.addpostNeedList.push({productName:data.name})
           }else{
+            for(var c in this.addpostNeedList){
+              if(this.addpostNeedList[c].productName===data.name){
+                this.addpostNeedList.splice(c,1)
+              }
+            }
             //console.log(data.name);
             // console.log(data,checked,indeterminate);
             // for(var c in this.addpostNeedList){
@@ -544,7 +871,14 @@
                 this.searchList.splice(c,1)
               }
             }
-            console.log('this.searchList数组：',this.searchList)
+            // this.searchListOnlyString.remove(data.name)
+            this.searchListOnlyString = this.searchListOnlyString.filter(item => item !== data.name);
+            // for(var c in this.searchListOnlyString){
+            //   if(this.searchListOnlyString[c].name===data.name){
+            //     this.searchListOnlyString.splice(c,1)
+            //   }
+            // }
+            console.log('this.searchListOnlyString内容：',this.searchListOnlyString)
           }
         },
         handleNodeClick(data) {
@@ -762,7 +1096,8 @@
       components:{
         myhead:myhead,
         myfoot:myfoot,
-        VDistpicker
+        VDistpicker,
+        bg
       },
       name: "needer",
       async created() {
@@ -773,10 +1108,251 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .need-bg{
     height:400px;
-    background:url(../../../static/images/needer.jpg)no-repeat;
+    background:url(../../../static/images/need2.jpg)no-repeat;
     background-size:100%,400px;
   }
+  .el-tree-node {
+    .is-leaf + .el-checkbox .el-checkbox__inner {
+      display:inline-block;
+    }
+    .el-checkbox__input> .el-checkbox__inner {
+      display:none;
+    }
+  }
+
+  /**
+ * transform-origin 设置旋转元素的基点位置
+ * animation-name 设置动画名称
+ * animation-duration 设置动画时间
+ * animation-fill-mode 设置播放后的状态
+ * animation-iteration-count 设置循环播放的次数
+ * transition-timing-function: cubic-bezier 贝塞尔曲线效果，它有四个值，指在X轴与Y轴的两个曲线的点，第一个点：X1 Y1;第二个点：X2 Y2
+ * transform: translate3d 设置动画Z轴位移几个元素，表示只在Z轴上移动
+ *
+ * 需要注意：transform: translate3d 不等于 transform: translateZ
+ */
+
+  .animated {
+    animation-duration: 3s; /*动画时间*/
+    animation-fill-mode: both; /*播放后的状态*/
+  }
+
+  .animated {
+    animation-iteration-count: 1; /*动作循环的次数：infinite 无限循环*/
+  }
+
+  .animated {
+    animation-duration: 2s; /*动画时间*/
+  }
+
+
+  .container:hover{
+    animation-name:container; /*动画的名称*/
+    transform-origin: center bottom; /*设置动画旋转元素的基点为：居中靠下*/
+    cursor: pointer;
+  }
+
+  @keyframes container{
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      transition-timing-function: cubic-bezier(0.215,.61,.355,1); /*贝塞尔曲线 ： X1 Y1 X2 Y2*/
+      transform: translate3d(0,0,0); /*设置只在Z轴上移动*/
+    }
+    40%,
+    43%{
+      transition-timing-function: cubic-bezier(0.755,0.50,0.855,0.060);
+      transform: translate3d(0,-30px,0);
+    }
+    70%{
+      transition-timing-function: cubic-bezier(0.755,0.050,0.855,0.060);
+      transform: translate3d(0,-15px,0);
+    }
+    90%{
+      transform: translate3d(0,-4px,0);
+    }
+  }
+  /*卡片*/
+  .main-container {
+    height: 360px;
+    max-height: 360px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .left-container {
+    background: var(--dark-gray);
+    color: #fff;
+    width:30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+
+  .title {
+    font-size: 2rem;
+    padding: 65px 40px;
+  }
+
+  .title span {
+    font-weight: bold;
+  }
+
+  .line {
+    border: 2px solid var(--dark-orange);
+    margin-top: 10px;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    padding: 35px 40px;
+  }
+
+  .profile img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .right-container {
+    background: #fcfcfc;
+    width:70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text {
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 65px 40px 35px 40px;
+  }
+
+  .text span {
+    font-size: 1.2rem;
+    /*font-weight: bold;*/
+    font-weight: 300;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 35px 40px;
+    border-top: 1px solid #fbfbfb;
+    box-shadow: 0px -15px 10px -10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .comments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .comments p {
+    margin: 0 20px 0 5px;
+    color: var(--light-gray);
+  }
+
+  /*文字动画*/
+  .animate {
+    font-size: 50px;
+    margin: 100px 0 0;
+  }
+
+  .animate span {
+    display: inline-block;
+  }
+
+
+  .animate span:nth-of-type(2) {
+    animation-delay: .05s;
+  }
+
+  .animate span:nth-of-type(3) {
+    animation-delay: .1s;
+  }
+
+  .animate span:nth-of-type(4) {
+    animation-delay: .15s;
+  }
+
+  .animate span:nth-of-type(5) {
+    animation-delay: .2s;
+  }
+
+  .animate span:nth-of-type(6) {
+    animation-delay: .25s;
+  }
+
+  .animate span:nth-of-type(7) {
+    animation-delay: .3s;
+  }
+
+  .animate span:nth-of-type(8) {
+    animation-delay: .35s;
+  }
+
+  .animate span:nth-of-type(9) {
+    animation-delay: .4s;
+  }
+
+  .animate span:nth-of-type(10) {
+    animation-delay: .45s;
+  }
+
+  .animate span:nth-of-type(11) {
+    animation-delay: .5s;
+  }
+
+  .animate span:nth-of-type(12) {
+    animation-delay: .55s;
+  }
+
+  .animate span:nth-of-type(13) {
+    animation-delay: .6s;
+  }
+
+  .animate span:nth-of-type(14) {
+    animation-delay: .65s;
+  }
+
+
+  /* Animation One */
+
+  .one span {
+    opacity: 0;
+    transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+    animation: revolveScale 2.3s forwards;
+  }
+
+  @keyframes revolveScale {
+    60% {
+      transform: translate(20px, 20px) rotate(30deg) scale(.3);
+    }
+    100% {
+      transform: translate(0) rotate(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /*背景*/
+  @import '../../../static/css/bg_style.css';
+
 </style>

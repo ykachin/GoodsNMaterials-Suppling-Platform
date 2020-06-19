@@ -1,5 +1,104 @@
 <template>
     <div>
+      <div class="nmsl bubbles">
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+        <div class="nmsl bubble"></div>
+
+      </div>
       <myhead></myhead>
       <!--主体-->
 <!--      <div>-->
@@ -59,10 +158,10 @@
 <!--      </div>-->
       <div>
         <!--<div  class="m-container m-padded-tb-big animated fadeIn need-bg" style="height:400px; background:url(../../../static/images/needer.jpg)no-repeat;background-size:100%,400px">-->
-        <div  class="m-container m-padded-tb-big animated fadeIn donate-bg" >
-          <div class="eight wide column">
-            <div class="ui stackable grid">
-              <div class="wide column two-size-center">
+        <div  class="m-container m-padded-tb-big animated fadeIn" >
+          <div class="ui container donate-bg">
+            <div class="ui stackable grid ">
+              <div class="sixteen wide column two-size-center">
                 <div style="margin-top:100px">
                   <nav class="mainNavs">
                     <a class="ui big-font" style="color: yellow">物资共享平台</a>
@@ -83,7 +182,7 @@
           </div>
         </div>
 
-        <div  class="m-container m-padded-tb-big animated fadeIn ">
+        <div  class="m-container m-padded-tb animated fadeIn ">
           <div class="ui container">
             <div class="ui stackable grid">
 
@@ -102,17 +201,17 @@
                 </div>
 
                 <!--content-->
-                <div class="ui attached  segment m-margin-top " style="border-radius: 15px" v-for="(item,index) in donateList">
+                <div class="ui attached  segment m-margin-top container animated" style="border-radius: 15px" v-for="(item,index) in donateList">
                   <div class="ui padded vertical segment" >
                     <div class="ui  mobile reversed stackable grid" >
                       <div class="forteen wide column left aligned " >
-                        <h3 class="ui header left aligned" ><a   target="_blank" class="m-black" >来自捐献地址为{{item.name}}的通知</a></h3>
+                        <h3 class="ui header left aligned" ><a   target="_blank" class="m-black" >{{item.name}}</a></h3>
                         <el-card shadow="hover" style="background-color: white" class="m-margin-top-small">
-                          捐献单位：{{item.accountName}}<br/>
-                          捐献账户：{{item.account}}<br/>
-                          受理银行：{{item.bank}}
+                          <i class="hospital outline icon"></i>捐献单位：{{item.accountName}}<br/>
+                          <i class="dollar sign icon"></i>捐献账户：{{item.account}}<br/>
+                          <i class="building icon"></i>受理银行：{{item.bank}}
                         </el-card>
-                        <div class="ui grid m-margin-top-small">
+                        <!--<div class="ui grid m-margin-top-small">
                           <div class="column">
                             <div class="ui mini horizontal link list">
                               <div class="item">
@@ -124,7 +223,7 @@
                             </div>
 
                           </div>
-                        </div>
+                        </div>-->
                       </div>
                     </div>
                   </div>
@@ -154,6 +253,7 @@
 <script>
     import myhead from "../myhead";
     import myfoot from "../myfoot";
+    import bg from '../../../static/js/bg_script'
 
     import VDistpicker from 'v-distpicker'
 
@@ -196,7 +296,7 @@
             method: 'get',
             url: '/api/donate/getNums',
           }).then(function (res) {
-            _this.$message.success('获取捐献渠道总数成功！')
+            // _this.$message.success('获取捐献渠道总数成功！')
             console.log("获取捐献渠道总数成功:",res)
             _this.totolDonateNum=res.data.data
           }).catch(function (res) {
@@ -235,7 +335,7 @@
             url: '/api/donate/getInfo',
             data: param
           }).then(function (res) {
-            _this.$message.success('获取捐献渠道List成功！')
+            // _this.$message.success('获取捐献渠道List成功！')
             console.log("获取捐献渠道List成功:",res)
             _this.donateList=res.data.data
           }).catch(function (res) {
@@ -290,7 +390,8 @@
       components:{
         myhead:myhead,
         myfoot:myfoot,
-        VDistpicker
+        VDistpicker,
+        bg
       },
       name: "personaldonate",
       async created() {
@@ -300,10 +401,66 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="less">
   .donate-bg{
     height:400px;
-    background:url(../../../static/images/needer.jpg)no-repeat;
+    background:url(../../../static/images/way.jpeg)no-repeat;
     background-size:100%,400px;
   }
+  /**
+ * transform-origin 设置旋转元素的基点位置
+ * animation-name 设置动画名称
+ * animation-duration 设置动画时间
+ * animation-fill-mode 设置播放后的状态
+ * animation-iteration-count 设置循环播放的次数
+ * transition-timing-function: cubic-bezier 贝塞尔曲线效果，它有四个值，指在X轴与Y轴的两个曲线的点，第一个点：X1 Y1;第二个点：X2 Y2
+ * transform: translate3d 设置动画Z轴位移几个元素，表示只在Z轴上移动
+ *
+ * 需要注意：transform: translate3d 不等于 transform: translateZ
+ */
+
+  .animated {
+    animation-duration: 1s; /*动画时间*/
+    animation-fill-mode: both; /*播放后的状态*/
+  }
+
+  .animated {
+    animation-iteration-count: 1; /*动作循环的次数：infinite 无限循环*/
+  }
+
+  .animated {
+    animation-duration: 2s; /*动画时间*/
+  }
+
+
+  .container:hover{
+    animation-name:container; /*动画的名称*/
+    transform-origin: center bottom; /*设置动画旋转元素的基点为：居中靠下*/
+    cursor: pointer;
+  }
+
+  @keyframes container{
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      transition-timing-function: cubic-bezier(0.215,.61,.355,1); /*贝塞尔曲线 ： X1 Y1 X2 Y2*/
+      transform: translate3d(0,0,0); /*设置只在Z轴上移动*/
+    }
+    40%,
+    43%{
+      transition-timing-function: cubic-bezier(0.755,0.50,0.855,0.060);
+      transform: translate3d(0,-30px,0);
+    }
+    70%{
+      transition-timing-function: cubic-bezier(0.755,0.050,0.855,0.060);
+      transform: translate3d(0,-15px,0);
+    }
+    90%{
+      transform: translate3d(0,-4px,0);
+    }
+  }
+  /*背景*/
+  @import '../../../static/css/bg_style.css';
 </style>

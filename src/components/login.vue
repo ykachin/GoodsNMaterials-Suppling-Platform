@@ -15,7 +15,7 @@
               <div class="column">
                 <h2 class="ui teal image header">
                   <div class="content" style="width: 500px">
-                    物资供给平台
+                    须臾疫物
                   </div>
                 </h2>
                 <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -272,7 +272,7 @@
               console.log(r)
               const res=r.data
               if(res.ok){
-                _this.$message.success('登陆成功')
+                /*_this.$message.success('登陆成功')*/
                 /*window.sessionStorage.setItem('primarypagenum',1)*/
                 window.sessionStorage.setItem('token',res.data.token.access_token)
                 //通过token查找用户信息
@@ -323,7 +323,7 @@
 
 <style scoped>
   #login {
-    background: url("../../static/images/bg4.jpg");
+    background: url("../../static/images/bg8.jpg");
     background-size:100% 100%;
     height: 100%;
     position: fixed;
